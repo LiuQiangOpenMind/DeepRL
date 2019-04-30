@@ -362,6 +362,7 @@ def ppo_feature(**kwargs):
     config.mini_batch_size = 32 * 5
     config.ppo_ratio_clip = 0.2
     config.log_interval = 128 * 5 * 10
+    config.max_steps = int(1e7)
     run_steps(PPOAgent(config))
 
 
